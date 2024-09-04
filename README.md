@@ -1,6 +1,6 @@
 # Challenge_120
 
-### Visualization of results for Jonas Deichmann's Challenge 120
+### Performance Plots for Jonas Deichmann's Challenge 120
 
 This repository contains data and code for creating figures showing statistics from [Jonas Deichmann](https://jonasdeichmann.com/)'s [Challenge 120](https://jonasdeichmann.com/challenge-120/).
 
