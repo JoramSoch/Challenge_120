@@ -18,6 +18,7 @@
 # - 30/07/2024, 13:34: splitted bike times
 # - 25/08/2024, 22:43: added y-axis labels
 # - 04/09/2024, 13:43: minor changes, some documentation
+# - 05/09/2024, 12:40: removed transparency
 
 
 # import modules
@@ -169,8 +170,7 @@ ax.text(x[dMD-1], 16-0.2, 'missing data\n|\nV', fontsize=14,
         horizontalalignment='center', verticalalignment='top')
 ax.text(N+2.5, 8, 'Note: Bike1 and\nBike2 are not\nmeasured, but\ninterpolated (half\nof total bike time).',
         horizontalalignment='left', verticalalignment='top', fontsize=14)
-
-fig.savefig('Figure_1.png', dpi=300, transparent=True)
+fig.savefig('Figure_1.png', dpi=300)
 
 # Figure 2: smoothed disciplines
 discs =['Swim','Bike','Run']
@@ -197,7 +197,7 @@ for k, disc in enumerate(discs):
     axs[k].set_ylabel('time [h]', fontsize=20)
     axs[k].text(x[dCR-1], T[dCR-1,j], ' Challenge Roth', fontsize=16,
                 horizontalalignment='left', verticalalignment='bottom')
-fig.savefig('Figure_2.png', dpi=300, transparent=True)
+fig.savefig('Figure_2.png', dpi=300)
 
 # Figure 3: smoothed breaks
 discs =['T1','Lunch','T2']
@@ -223,7 +223,7 @@ for k, disc in enumerate(discs):
     axs[k].set_ylabel('time [min]', fontsize=20)
     axs[k].text(x[dCR-1], T[dCR-1,j]*60, ' Challenge Roth', fontsize=16,
                 horizontalalignment='left', verticalalignment='bottom')
-fig.savefig('Figure_3.png', dpi=300, transparent=True)
+fig.savefig('Figure_3.png', dpi=300)
 
 # Figure 4: smoothed total time
 disc = 'Total'
@@ -246,4 +246,4 @@ ax.set_ylabel('time [h]', fontsize=20)
 ax.set_title('Challenge 120: All Days, Total Time', fontsize=32)
 ax.text(x[dCR-1], T[dCR-1,j], ' Challenge Roth', fontsize=20,
         horizontalalignment='left', verticalalignment='bottom')
-fig.savefig('Figure_4.png', dpi=300, transparent=True)
+fig.savefig('Figure_4.png', dpi=300)
